@@ -1,0 +1,33 @@
+import math
+
+#O(3n):
+def algorithm1(n):
+    for i in range(3*n):
+        print(i)
+
+# O(nlogn):
+def algorithm2(n):
+    for i in range(n):
+        for j in range(int(n * math.log2(n))):
+            print(i, j)
+
+
+#O(n!):
+import itertools
+
+def algorithm3(n):
+    result = list(itertools.permutations(range(n)))
+    return result
+
+#O(n^3):
+def algorithm4(n):
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                print(i, j, k)
+
+
+#O(3log(n)):
+def algorithm5(n):
+    for i in range(3 * int(math.log2(n))):
+        print(i)
